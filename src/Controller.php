@@ -98,6 +98,23 @@ abstract class Controller extends \stdClass
     }
 
     /**
+     * 对接接口返回
+     * @Author Cindy
+     * @E-main cindyli@topichina.com.cn
+     * @param  [type]                   $info [description]
+     * @param  string                   $data [description]
+     * @param  integer                  $code [description]
+     * @return [type]                         [description]
+     */
+    public function apierror($info, $data = '{-null-}', $code = 0): void
+    {
+        if ($data === '{-null-}') $data = new \stdClass();
+        throw new HttpResponseException(json([
+            'errorCode' => $code, 'errorMessage' => $info, 'data' => $data,
+        ]));
+    }
+
+    /**
      * 返回成功的操作
      * @param mixed $info 消息内容
      * @param mixed $data 返回数据
@@ -114,6 +131,26 @@ abstract class Controller extends \stdClass
         ]));
     }
 
+    /**
+     * 对外接口返回
+     * @Author Cindy
+     * @E-main cindyli@topichina.com.cn
+     * @param  [type]                   $info [description]
+     * @param  string                   $data [description]
+     * @param  integer                  $code [description]
+     * @return [type]                         [description]
+     */
+    public function apisuccess($info, $data = '{-null-}', $code = 1): void
+    {
+        if ($this->csrf_state) {
+            TokenHelper::instance()->clear();
+        }
+        if ($data === '{-null-}') $data = new \stdClass();
+        throw new HttpResponseException(json([
+            'errorCode' => $code, 'errorMessage' => $info, 'data' => $data,
+        ]));
+    }
+    
     /**
      * URL重定向
      * @param string $url 跳转链接
