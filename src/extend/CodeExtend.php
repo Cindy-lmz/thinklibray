@@ -59,8 +59,8 @@ class CodeExtend
         while (strlen($code) < $size) $code .= rand(0, 9);
         return $code;
     }
-
-    /**
+    
+     /**
      * 抽奖
      * @Author Cindy
      * @E-main cindyli@topichina.com.cn

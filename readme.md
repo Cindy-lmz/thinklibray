@@ -1,5 +1,4 @@
-# ThinkLibrary 6.0 for ThinkPHP 6.0
-ThinkLibrary 6.0 是针对 ThinkPHP 6.0 版本封装的一套工具类库，方便快速构建 WEB 应用。
+ ThinkPHP 6.0 版本封装的一套工具类库，方便快速构建 WEB 应用。
 
 ## 包含组件
 * 数据列表展示（可带高级搜索器）
