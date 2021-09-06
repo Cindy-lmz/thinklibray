@@ -1,7 +1,4 @@
 <?php
-
-
-
 return [
     'think_library_not_auth'            => 'Sorry, no permission to access the operation.',
     'think_library_not_login'           => 'Sorry, requiring login to obtain view permission.',

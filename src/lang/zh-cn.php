@@ -1,7 +1,4 @@
 <?php
-
-
-
 return [
     'think_library_not_auth'            => '抱歉，没有访问该操作的权限！',
     'think_library_not_login'           => '抱歉，需要登录获取访问权限！',

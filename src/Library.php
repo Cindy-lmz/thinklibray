@@ -1,7 +1,4 @@
 <?php
-
-
-
 namespace think\admin;
 
 use think\admin\command\Database;
