@@ -1,0 +1,37 @@
+{
+    "type": "library",
+    "name": "topi-cindy/thinklibray",
+    "description": "thinkphp6 Development Library admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cindy",
+            "email": "cindyli@topichina.com.cn"
+        }
+    ],
+    "require": {
+        "ext-gd": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-iconv": "*",
+        "ext-mbstring": "*",
+        "topthink/framework": "^6.0",
+        "alibabacloud/client": "^1.5",
+        "tlingc/think-aliyunsls": "^1.0"
+    },
+    "autoload": {
+      "files": [
+        "src/common.php"
+      ],
+      "psr-4": {
+        "think\\admin\\": "src"
+      }
+    },
+    "extra": {
+      "think": {
+        "services": [
+          "think\\admin\\Library"
+        ]
+      }
+  }
+}
